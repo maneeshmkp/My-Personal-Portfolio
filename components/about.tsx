@@ -15,7 +15,7 @@ export default function About() {
             <div className="relative animate-in">
               <div className="relative aspect-square overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=600&width=600"
+                  src="https://avatars.githubusercontent.com/u/149099977?v=4"
                   alt="Profile"
                   width={600}
                   height={600}
@@ -47,11 +47,11 @@ export default function About() {
                 </div>
                 <div>
                   <p className="font-medium">Email:</p>
-                  <p className="text-muted-foreground">your.email@example.com</p>
+                  <p className="text-muted-foreground">connect.to.maneeshmkp@gmail.com</p>
                 </div>
                 <div>
                   <p className="font-medium">Location:</p>
-                  <p className="text-muted-foreground">City, Country</p>
+                  <p className="text-muted-foreground">Sonipat, India</p>
                 </div>
                 <div>
                   <p className="font-medium">Availability:</p>
