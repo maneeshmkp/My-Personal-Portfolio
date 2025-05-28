@@ -8,13 +8,13 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Your Name. All rights reserved.
+              © {new Date().getFullYear()} Maneesh Kumar. All rights reserved.
             </p>
           </div>
 
           <div className="flex items-center space-x-4">
             <Link
-              href="https://github.com"
+              href="https://github.com/maneeshmkp"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -23,7 +23,7 @@ export default function Footer() {
               <Github className="h-5 w-5" />
             </Link>
             <Link
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/maneeshmkp/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -32,7 +32,7 @@ export default function Footer() {
               <Linkedin className="h-5 w-5" />
             </Link>
             <Link
-              href="https://twitter.com"
+              href="https://x.com/ManeeshKum14044"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -41,7 +41,7 @@ export default function Footer() {
               <Twitter className="h-5 w-5" />
             </Link>
             <Link
-              href="mailto:your.email@example.com"
+              href="mailto:connect.to.maneeshmkp@gmail.com"
               className="text-muted-foreground hover:text-primary transition-colors"
               aria-label="Email"
             >
