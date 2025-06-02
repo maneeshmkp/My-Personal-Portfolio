@@ -6,6 +6,7 @@ import WorkExperience from "@/components/work-experience"
 import MotivationalQuote from "@/components/motivational-quote"
 import Skills from "@/components/skills"
 import Projects from "@/components/projects"
+import CodingProfiles from "@/components/coding-profiles"
 import Testimonials from "@/components/testimonials"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
@@ -26,6 +27,7 @@ export default function Home() {
         <MotivationalQuote />
         <Skills />
         <Projects />
+         <CodingProfiles />
         <Testimonials />
         <Contact />
       </main>
