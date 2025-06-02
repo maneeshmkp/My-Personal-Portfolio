@@ -21,16 +21,16 @@ const testimonials: Testimonial[] = [
     name: "Sarah Johnson",
     position: "Senior Developer",
     company: "TechCorp",
-    image: "/placeholder.svg?height=100&width=100",
+    image: "/client1.jpg?height=100&width=100",
     quote:
       "Maneesh is an exceptional developer with a keen eye for detail. His ability to solve complex problems quickly made our project a success. I would gladly work with him again on future projects.",
   },
   {
     id: 2,
-    name: "Michael Chen",
+    name: "Edmond Dantès",
     position: "Project Manager",
     company: "InnovateSoft",
-    image: "/placeholder.svg?height=100&width=100",
+    image: "/client2.jpg?height=100&width=100",
     quote:
       "Working with Maneesh was a pleasure. His technical skills are impressive, and he consistently delivered high-quality code ahead of schedule. His communication skills made collaboration seamless.",
   },
@@ -39,7 +39,7 @@ const testimonials: Testimonial[] = [
     name: "Priya Patel",
     position: "UI/UX Designer",
     company: "DesignHub",
-    image: "/placeholder.svg?height=100&width=100",
+    image: "/client3.jpg?height=100&width=100",
     quote:
       "Maneesh has a rare combination of technical expertise and design sensibility. He implemented my designs perfectly and even suggested improvements that enhanced the user experience.",
   },
@@ -48,7 +48,7 @@ const testimonials: Testimonial[] = [
     name: "David Wilson",
     position: "CTO",
     company: "StartupX",
-    image: "/placeholder.svg?height=100&width=100",
+    image: "/client4.jpg?height=100&width=100",
     quote:
       "I was impressed by Maneesh's ability to quickly understand our complex codebase and make significant improvements. His C++ optimizations resulted in a 40% performance boost for our application.",
   },
