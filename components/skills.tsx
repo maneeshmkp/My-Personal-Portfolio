@@ -4,6 +4,12 @@ import { Code, Database, Layout, Palette, Server, Smartphone } from "lucide-reac
 
 const skills = [
   {
+    category: "Programming Skills",
+    icon: <Smartphone className="h-8 w-8 mb-4 text-primary" />,
+    items: ["C/C++", "Java", "Python", "SQL", "DSA", "Problem Solving"],
+  },
+
+  {
     category: "Frontend",
     icon: <Layout className="h-8 w-8 mb-4 text-primary" />,
     items: ["HTML/CSS", "JavaScript", "React", "Next.js", "Tailwind CSS"],
@@ -16,18 +22,14 @@ const skills = [
   {
     category: "Database",
     icon: <Database className="h-8 w-8 mb-4 text-primary" />,
-    items: ["MongoDB", "PostgreSQL", "MySQL", "Firebase", "Supabase"],
+    items: ["MongoDB", "PostgreSQL", "MySQL"],
   },
   {
     category: "Design",
     icon: <Palette className="h-8 w-8 mb-4 text-primary" />,
-    items: ["Figma", "Adobe XD", "UI/UX", "Responsive Design", "Wireframing"],
+    items: ["UI/UX", "Responsive Design", "Wireframing"],
   },
-  {
-    category: "Mobile",
-    icon: <Smartphone className="h-8 w-8 mb-4 text-primary" />,
-    items: ["React Native", "Flutter", "iOS", "Android", "PWA"],
-  },
+  
   {
     category: "Other",
     icon: <Code className="h-8 w-8 mb-4 text-primary" />,
