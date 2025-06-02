@@ -30,14 +30,20 @@ export default function About() {
             <div className="animate-in">
               <h3 className="text-2xl font-semibold mb-4">Full Stack Developer & UI/UX Designer</h3>
               <p className="text-muted-foreground mb-6">
-                I'm a passionate developer with expertise in creating beautiful, functional, and user-centered digital
-                experiences. With a background in both design and development, I bring a unique perspective to every
-                project.
+                I’m a passionate full-stack developer, competitive programmer, 
+                and machine learning enthusiast, currently pursuing my BTech 
+                in Information Technology from the Indian Institute of Information Technology,
+                 Sonepat. I love solving complex problems through Data Structures and Algorithms and
+                  have solved over 600+ DSA problems across platforms like 
+                  LeetCode and GeeksforGeeks. 
+                  
               </p>
               <p className="text-muted-foreground mb-6">
-                My journey in tech started 5 years ago, and since then, I've worked on a diverse range of projects, from
-                e-commerce platforms to complex web applications. I'm constantly learning and exploring new technologies
-                to stay at the forefront of web development.
+                I enjoy building scalable web applications that combine clean design with 
+                  efficient back-end systems, while also exploring machine learning to create data-driven
+                    solutions. I’m a lifelong learner, driven by curiosity and teamwork,
+                    always eager to grow, innovate, and contribute to impactful projects in the software
+                      world.
               </p>
 
               <div className="grid grid-cols-2 gap-4">
