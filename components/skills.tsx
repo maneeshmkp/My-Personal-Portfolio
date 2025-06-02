@@ -17,7 +17,7 @@ const skills = [
   {
     category: "Backend",
     icon: <Server className="h-8 w-8 mb-4 text-primary" />,
-    items: ["Node.js", "Express", "Python", "Django", "RESTful APIs"],
+    items: ["Node.js", "Express.js", "Python", "Fast APIs", "RESTful APIs"],
   },
   {
     category: "Database",
@@ -33,7 +33,7 @@ const skills = [
   {
     category: "Other",
     icon: <Code className="h-8 w-8 mb-4 text-primary" />,
-    items: ["Git", "Docker", "CI/CD", "AWS", "Vercel"],
+    items: ["Git", "Docker", "CI/CD", "AWS", "Vercel", "AI/ML"],
   },
 ]
 
