@@ -16,7 +16,7 @@ interface WorkExperience {
 }
 
 const experiences: WorkExperience[] = [
-  {
+  { 
     id: 1,
     title: "Software Engineer Intern",
     company: "Internship Studio",
@@ -50,16 +50,16 @@ export default function WorkExperience() {
             {experiences.map((experience, index) => (
               <div key={experience.id} className="relative pl-8 md:pl-0 animate-in group">
                 {/* Timeline line (visible on md and up) */}
-                <div className="hidden md:block absolute left-[50%] top-0 bottom-0 w-0.5 bg-primary/20 -translate-x-1/2 z-0"></div>
+                <div className="hidden md:block absolute left-[50%] top-12 bottom-0 w-0.5 bg-primary/20 -translate-x-1/2 z-0"></div>
 
                 {/* Timeline dot (visible on md and up) */}
-                <div className="hidden md:flex absolute left-[50%] top-0 -translate-x-1/2 z-10 w-12 h-12 rounded-full bg-primary/10 items-center justify-center group-hover:bg-primary/20 transition-colors">
+                <div className="hidden md:flex absolute left-[50%] top-8 -translate-x-1/2 z-10 w-12 h-12 rounded-full bg-primary/10 items-center justify-center group-hover:bg-primary/20 transition-colors">
                   <Briefcase className="h-6 w-6 text-primary" />
                 </div>
 
                 {/* Mobile timeline line and dot */}
-                <div className="md:hidden absolute left-0 top-0 bottom-0 w-0.5 bg-primary/20 z-0"></div>
-                <div className="md:hidden absolute left-0 top-0 z-10 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center -translate-x-1/2 group-hover:bg-primary/20 transition-colors">
+                <div className="md:hidden absolute left-0 top-6 bottom-0 w-0.5 bg-primary/20 z-0"></div>
+                <div className="md:hidden absolute left-0 top-6 z-10 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center -translate-x-1/2 group-hover:bg-primary/20 transition-colors">
                   <Briefcase className="h-4 w-4 text-primary" />
                 </div>
 
@@ -81,7 +81,7 @@ export default function WorkExperience() {
                   </div>
 
                   {/* Right side - Content */}
-                  <div className="md:col-span-3 md:pl-12">
+                  <div className="md:col-span-3 md:pl-28">
                     {/* Mobile date display */}
                     <div className="flex items-center mb-2 md:hidden">
                       <Calendar className="h-4 w-4 text-primary mr-2" />
@@ -122,7 +122,7 @@ export default function WorkExperience() {
                           ))}
                         </ul>
 
-                        <div className="flex flex-wrap gap-2 mt-4">
+                        <div className="flex flex-wrap gap-1.5 mt-4">
                           {experience.skills.map((skill, idx) => (
                             <Badge key={idx} variant="secondary" className="bg-primary/10 hover:bg-primary/20">
                               {skill}
