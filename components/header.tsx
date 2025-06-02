@@ -39,7 +39,7 @@ export default function Header() {
           className="text-2xl font-bold tracking-tight hover:text-primary transition-colors"
           onClick={(e) => handleNavClick(e, "#home")}
         >
-          Maneesh Kumar
+          Portfolio
         </Link>
 
         {/* Desktop Navigation */}
