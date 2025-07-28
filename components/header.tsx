@@ -36,7 +36,7 @@ export default function Header() {
       <div className="container flex items-center justify-between">
         <Link
           href="#home"
-          className="text-2xl font-bold tracking-tight hover:text-primary transition-colors"
+          className="text-2xl font-bold tracking-tight hover:text-primary transition-colors mr-4"
           onClick={(e) => handleNavClick(e, "#home")}
         >
           Portfolio
@@ -48,7 +48,7 @@ export default function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-medium hover:text-primary transition-colors"
+              className="text-lg font-medium hover:text-primary transition-colors"
               onClick={(e) => handleNavClick(e, item.href)}
             >
               {item.name}

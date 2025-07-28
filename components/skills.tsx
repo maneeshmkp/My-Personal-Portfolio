@@ -53,10 +53,10 @@ export default function Skills() {
                 className="bg-card p-6 rounded-lg border shadow-sm hover:shadow-md transition-shadow animate-in"
               >
                 <div className="text-center mb-4">{skill.icon}</div>
-                <h3 className="text-xl font-semibold text-center mb-4">{skill.category}</h3>
+                <h3 className="text-2xl font-semibold text-center mb-4">{skill.category}</h3>
                 <ul className="space-y-2">
                   {skill.items.map((item, idx) => (
-                    <li key={idx} className="flex items-center justify-center text-muted-foreground">
+                    <li key={idx} className="text-lg flex items-center justify-center text-muted-foreground">
                       <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary mr-2"></span>
                       {item}
                     </li>

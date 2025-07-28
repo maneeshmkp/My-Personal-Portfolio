@@ -96,10 +96,10 @@ export default function Testimonials() {
                           </div>
                           <div className="flex-grow">
                             <Quote className="h-8 w-8 text-primary/30 mb-2" />
-                            <p className="text-lg italic mb-6">{testimonial.quote}</p>
+                            <p className="text-xl italic mb-6">{testimonial.quote}</p>
                             <div className="text-right">
-                              <p className="font-semibold">{testimonial.name}</p>
-                              <p className="text-sm text-muted-foreground">
+                              <p className="text-lg font-semibold">{testimonial.name}</p>
+                              <p className="text-base text-muted-foreground">
                                 {testimonial.position}, {testimonial.company}
                               </p>
                             </div>

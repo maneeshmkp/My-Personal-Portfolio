@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge"
 
 const projects = [
   {
-    title: "SHL-Assessment-Recommendation-System",
+    title: "SHL Assessment Recommendation System",
     description:
       "The SHL Assessment System recommends cognitive, personality, and situational tests for roles, ensuring data-driven, competency-based talent selection.",
     image: "/assessment.jpg?height=400&width=600",
@@ -81,13 +81,13 @@ export default function Projects() {
                     />
                   </div>
                   <CardHeader>
-                    <CardTitle>{project.title}</CardTitle>
-                    <CardDescription>{project.description}</CardDescription>
+                    <CardTitle className="">{project.title}</CardTitle>
+                    <CardDescription  className="text-base">{project.description}</CardDescription>
                   </CardHeader>
                   <CardContent className="flex-grow">
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag, idx) => (
-                        <Badge key={idx} variant="secondary">
+                        <Badge className="text-sm" key={idx} variant="secondary">
                           {tag}
                         </Badge>
                       ))}

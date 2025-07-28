@@ -29,7 +29,7 @@ export default function About() {
 
             <div className="animate-in">
               <h3 className="text-2xl font-semibold mb-4">Full Stack Developer & UI/UX Designer</h3>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-lg text-muted-foreground mb-6">
                 I’m a passionate full-stack developer, competitive programmer, 
                 and machine learning enthusiast, currently pursuing my BTech 
                 in Information Technology from the Indian Institute of Information Technology,
@@ -38,7 +38,7 @@ export default function About() {
                   LeetCode and GeeksforGeeks. 
                   
               </p>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-lg text-muted-foreground mb-6">
                 I enjoy building scalable web applications that combine clean design with 
                   efficient back-end systems, while also exploring machine learning to create data-driven
                     solutions. I’m a lifelong learner, driven by curiosity and teamwork,
@@ -46,7 +46,7 @@ export default function About() {
                       world.
               </p>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="text-lg grid grid-cols-2 gap-4">
                 <div>
                   <p className="font-medium">Name:</p>
                   <p className="text-muted-foreground">Maneesh Kumar</p>

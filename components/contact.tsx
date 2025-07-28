@@ -33,12 +33,12 @@ export default function Contact() {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="animate-in">
               <h3 className="text-2xl font-semibold mb-6">Contact Info</h3>
-              <p className="text-muted-foreground mb-8">
+              <p className="text-lg text-muted-foreground mb-8">
                 Feel free to reach out to me for any questions or opportunities. I'm always open to discussing new
                 projects, creative ideas, or opportunities to be part of your vision.
               </p>
 
-              <div className="space-y-6">
+              <div className="text-lg space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="bg-primary/10 p-3 rounded-full">
                     <Mail className="h-5 w-5 text-primary" />
@@ -80,10 +80,10 @@ export default function Contact() {
                     <Send className="h-6 w-6 text-primary" />
                   </div>
                   <h4 className="text-xl font-medium mb-2">Message Sent!</h4>
-                  <p className="text-muted-foreground">
+                  <p className="text-lg text-muted-foreground">
                     Thank you for your message. I'll get back to you as soon as possible.
                   </p>
-                  <Button className="mt-4" onClick={() => setIsSubmitted(false)}>
+                  <Button className="text-lg mt-4" onClick={() => setIsSubmitted(false)}>
                     Send Another Message
                   </Button>
                 </div>
@@ -108,7 +108,7 @@ export default function Contact() {
                         Sending...
                       </span>
                     ) : (
-                      <span className="flex items-center gap-2">
+                      <span className="text-lg flex items-center gap-2">
                         <Send className="h-4 w-4" />
                         Send Message
                       </span>

@@ -171,7 +171,7 @@ const experiences: WorkExperience[] = [
     id: 1,
     title: "Software Engineer Intern",
     company: "Internship Studio",
-    location: "Remote",
+    location: "Pune Maharashtra",
     period: "Mar 2024 - Apr 2024",
     achievements: [
       "Applied advanced C++ algorithms, improving code efficiency and execution speed by 40% for complex tasks.",
@@ -219,13 +219,13 @@ export default function WorkExperience() {
                   {/* Left side - Date (on desktop) */}
                   <div className="hidden md:block md:col-span-2 md:text-right pr-12">
                     <div className="flex items-center justify-end mb-2">
-                      <span className="text-muted-foreground mr-2 group-hover:text-foreground transition-colors">
+                      <span className="text-lg text-muted-foreground mr-2 group-hover:text-foreground transition-colors">
                         {experience.period}
                       </span>
                       <Calendar className="h-4 w-4 text-primary" />
                     </div>
                     <div className="flex items-center justify-end">
-                      <span className="text-muted-foreground mr-2 group-hover:text-foreground transition-colors">
+                      <span className="text-lg text-muted-foreground mr-2 group-hover:text-foreground transition-colors">
                         {experience.location}
                       </span>
                       <Building className="h-4 w-4 text-primary" />
@@ -250,14 +250,14 @@ export default function WorkExperience() {
                     {/* Mobile date display */}
                     <div className="flex items-center mb-2 md:hidden">
                       <Calendar className="h-4 w-4 text-primary mr-2" />
-                      <span className="text-sm text-muted-foreground">{experience.period}</span>
+                      <span className="text-lg text-muted-foreground">{experience.period}</span>
                     </div>
 
                     <div className="flex justify-between items-center">
-                      <h3 className="text-xl font-semibold">{experience.title}</h3>
+                      <h3 className="text-2xl font-semibold">{experience.title}</h3>
                       <Button
                         variant="ghost"
-                        size="sm"
+                        size="lg"
                         className="h-8 w-8 p-0 rounded-full"
                         onClick={() => toggleExpand(experience.id)}
                       >
@@ -268,7 +268,7 @@ export default function WorkExperience() {
                         )}
                       </Button>
                     </div>
-                    <p className="text-primary font-medium mb-4">{experience.company}</p>
+                    <p className="text-xl text-primary font-medium mb-4">{experience.company}</p>
 
                     {/* Company Logo (Mobile) */}
                     <div className="mb-4 md:hidden">
@@ -286,12 +286,12 @@ export default function WorkExperience() {
                     {/* Mobile location display */}
                     <div className="flex items-center mb-4 md:hidden">
                       <Building className="h-4 w-4 text-primary mr-2" />
-                      <span className="text-sm text-muted-foreground">{experience.location}</span>
+                      <span className="text-lg text-muted-foreground">{experience.location}</span>
                     </div>
 
                     {expandedId === experience.id && (
                       <div className="animate-in">
-                        <ul className="space-y-3 mb-4 pl-5 border-l-2 border-primary/20">
+                        <ul className="text-lg space-y-3 mb-4 pl-5 border-l-2 border-primary/20">
                           {experience.achievements.map((achievement, idx) => (
                             <li key={idx} className="relative">
                               <span className="absolute -left-[11px] top-2 h-2 w-2 rounded-full bg-primary"></span>
@@ -300,7 +300,7 @@ export default function WorkExperience() {
                           ))}
                         </ul>
 
-                        <div className="flex flex-wrap gap-1.5 mt-4">
+                        <div className="text-lg flex flex-wrap gap-1.5 mt-4">
                           {experience.skills.map((skill, idx) => (
                             <Badge key={idx} variant="secondary" className="bg-primary/10 hover:bg-primary/20">
                               {skill}

@@ -40,7 +40,7 @@ const profiles: CodingProfile[] = [
     colors: {
       bg: "bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-950/30 dark:to-yellow-950/30",
       border: "border-orange-200 dark:border-orange-800",
-      text: "text-orange-700 dark:text-orange-300",
+      text: "text-sm text-orange-700 dark:text-orange-300",
       accent: "bg-orange-500 dark:bg-orange-600",
     },
   },
@@ -58,7 +58,7 @@ const profiles: CodingProfile[] = [
     colors: {
       bg: "bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/30 dark:to-orange-950/30",
       border: "border-amber-200 dark:border-amber-800",
-      text: "text-amber-700 dark:text-amber-300",
+      text: "text-sm text-amber-700 dark:text-amber-300",
       accent: "bg-amber-500 dark:bg-amber-600",
     },
   },
@@ -76,7 +76,7 @@ const profiles: CodingProfile[] = [
     colors: {
       bg: "bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950/30 dark:to-cyan-950/30",
       border: "border-blue-200 dark:border-blue-800",
-      text: "text-blue-700 dark:text-blue-300",
+      text: "text-sm text-blue-700 dark:text-blue-300",
       accent: "bg-blue-500 dark:bg-blue-600",
     },
   },
@@ -95,7 +95,7 @@ const profiles: CodingProfile[] = [
     colors: {
       bg: "bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/30 dark:to-emerald-950/30",
       border: "border-green-200 dark:border-green-800",
-      text: "text-green-700 dark:text-green-300",
+      text: "text-sm text-green-700 dark:text-green-300",
       accent: "bg-green-500 dark:bg-green-600",
     },
   },
@@ -113,7 +113,7 @@ const profiles: CodingProfile[] = [
     colors: {
       bg: "bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30",
       border: "border-purple-200 dark:border-purple-800",
-      text: "text-purple-700 dark:text-purple-300",
+      text: "text-sm text-purple-700 dark:text-purple-300",
       accent: "bg-purple-500 dark:bg-purple-600",
     },
   },
@@ -127,7 +127,7 @@ export default function CodingProfiles() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 animate-in">
             Coding <span className="text-primary">Profiles</span>
           </h2>
-          <p className="text-center text-muted-foreground mb-16 animate-in">
+          <p className="text-xl text-center text-muted-foreground mb-16 animate-in">
             My competitive programming journey across various platforms
           </p>
 
@@ -135,15 +135,15 @@ export default function CodingProfiles() {
             {profiles.map((profile, index) => (
               <div key={index} className="animate-in">
                 <Card
-                  className={`overflow-hidden h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${profile.colors.bg} ${profile.colors.border}`}
+                  className={`text-sm overflow-hidden h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${profile.colors.bg} ${profile.colors.border}`}
                 >
                   <CardHeader className="pb-4">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
                         <div className={`p-2 rounded-lg ${profile.colors.accent} text-white`}>{profile.icon}</div>
                         <div>
-                          <CardTitle className={`text-lg ${profile.colors.text}`}>{profile.platform}</CardTitle>
-                          <p className="text-sm text-muted-foreground">@{profile.username}</p>
+                          <CardTitle className={`text-2xl font-semibold ${profile.colors.text}`}>{profile.platform}</CardTitle>
+                          <p className="text-base text-muted-foreground">@{profile.username}</p>
                         </div>
                       </div>
                       <Button
@@ -166,7 +166,7 @@ export default function CodingProfiles() {
                       <div className="space-y-2">
                         {profile.stats.map((stat, idx) => (
                           <div key={idx} className="flex justify-between items-center">
-                            <span className="text-sm text-muted-foreground">{stat.label}</span>
+                            <span className="text-base text-muted-foreground">{stat.label}</span>
                             <span className={`font-semibold text-sm ${profile.colors.text}`}>{stat.value}</span>
                           </div>
                         ))}
@@ -192,7 +192,7 @@ export default function CodingProfiles() {
                     {/* Visit Profile Button */}
                     <Button className={`w-full ${profile.colors.accent} hover:opacity-90 text-white border-0`} asChild>
                       <a href={profile.profileUrl} target="_blank" rel="noopener noreferrer">
-                        <span>Visit Profile</span>
+                        <span className="text-lg">Visit Profile</span>
                         <ExternalLink className="ml-2 h-4 w-4" />
                       </a>
                     </Button>
@@ -206,19 +206,19 @@ export default function CodingProfiles() {
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center p-6 rounded-lg bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-indigo-950/30 dark:to-blue-950/30 border border-indigo-200 dark:border-indigo-800">
               <div className="text-2xl md:text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">700+</div>
-              <div className="text-sm text-muted-foreground">Total Problems</div>
+              <div className="text-base text-muted-foreground">Total Problems</div>
             </div>
             <div className="text-center p-6 rounded-lg bg-gradient-to-br from-emerald-50 to-green-50 dark:from-emerald-950/30 dark:to-green-950/30 border border-emerald-200 dark:border-emerald-800">
               <div className="text-2xl md:text-3xl font-bold text-emerald-600 dark:text-emerald-400 mb-2">20+</div>
-              <div className="text-sm text-muted-foreground">Contests</div>
+              <div className="text-base text-muted-foreground">Contests</div>
             </div>
             <div className="text-center p-6 rounded-lg bg-gradient-to-br from-rose-50 to-pink-50 dark:from-rose-950/30 dark:to-pink-950/30 border border-rose-200 dark:border-rose-800">
               <div className="text-2xl md:text-3xl font-bold text-rose-600 dark:text-rose-400 mb-2">45+</div>
-              <div className="text-sm text-muted-foreground">Achievements</div>
+              <div className="text-base text-muted-foreground">Achievements</div>
             </div>
             <div className="text-center p-6 rounded-lg bg-gradient-to-br from-violet-50 to-purple-50 dark:from-violet-950/30 dark:to-purple-950/30 border border-violet-200 dark:border-violet-800">
               <div className="text-2xl md:text-3xl font-bold text-violet-600 dark:text-violet-400 mb-2">3+</div>
-              <div className="text-sm text-muted-foreground">Years Active</div>
+              <div className="text-base text-muted-foreground">Years Active</div>
             </div>
           </div>
         </div>
