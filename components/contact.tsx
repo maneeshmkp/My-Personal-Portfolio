@@ -10,16 +10,41 @@ import { Mail, MapPin, Phone, Send } from "lucide-react"
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState("")
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setError("")
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
+      const formData = new FormData(e.currentTarget)
+      const data = {
+        name: formData.get("name"),
+        email: formData.get("email"),
+        subject: formData.get("subject"),
+        message: formData.get("message"),
+      }
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.error || "Failed to send email")
+      }
+
+      setIsSubmitting(false)
+      setIsSubmitted(true)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "An error occurred")
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -89,17 +114,22 @@ export default function Contact() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
+                  {error && (
+                    <div className="bg-destructive/10 p-3 rounded-lg text-destructive text-sm">
+                      {error}
+                    </div>
+                  )}
                   <div>
-                    <Input type="text" placeholder="Your Name" required className="bg-muted/50" />
+                    <Input type="text" name="name" placeholder="Your Name" required className="bg-muted/50" />
                   </div>
                   <div>
-                    <Input type="email" placeholder="Your Email" required className="bg-muted/50" />
+                    <Input type="email" name="email" placeholder="Your Email" required className="bg-muted/50" />
                   </div>
                   <div>
-                    <Input type="text" placeholder="Subject" required className="bg-muted/50" />
+                    <Input type="text" name="subject" placeholder="Subject" required className="bg-muted/50" />
                   </div>
                   <div>
-                    <Textarea placeholder="Your Message" rows={5} required className="bg-muted/50 resize-none" />
+                    <Textarea name="message" placeholder="Your Message" rows={5} required className="bg-muted/50 resize-none" />
                   </div>
                   <Button type="submit" className="w-full" disabled={isSubmitting}>
                     {isSubmitting ? (
