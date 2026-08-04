@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { ChevronDown } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import Reveal from "@/components/reveal"
@@ -14,6 +15,7 @@ interface WorkExperienceItem {
   period: string
   achievements: string[]
   skills: string[]
+  logo: string
 }
 
 const experiences: WorkExperienceItem[] = [
@@ -30,6 +32,7 @@ const experiences: WorkExperienceItem[] = [
       "Delivered high-quality evaluation artifacts via structured review workflows with Cursor, Git, and standardized repositories.",
     ],
     skills: ["LLM Evaluation", "Dataset Curation", "Prompt Engineering", "Git", "Cursor"],
+    logo: "/xelron-logo.png",
   },
   {
     id: 2,
@@ -42,6 +45,7 @@ const experiences: WorkExperienceItem[] = [
       "Improved AI evaluation quality through bug detection, logic validation, and prompt review.",
     ],
     skills: ["Code Review", "AI Evaluation", "Bug Detection", "Prompt Review"],
+    logo: "/xelron-logo.png",
   },
 ]
 
@@ -74,12 +78,22 @@ export default function WorkExperience() {
                     onClick={() => setExpandedId(open ? null : exp.id)}
                     aria-expanded={open}
                   >
-                    <div>
-                      <p className="font-mono-tech text-xs text-primary tracking-wider mb-2">{exp.period}</p>
-                      <h3 className="font-display text-xl md:text-2xl font-semibold">{exp.title}</h3>
-                      <p className="text-muted-foreground mt-1">
-                        {exp.company} · {exp.location}
-                      </p>
+                    <div className="flex items-start gap-4 min-w-0">
+                      <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-xl border border-border/80 bg-white p-2 shadow-sm">
+                        <Image
+                          src={exp.logo}
+                          alt={`${exp.company} logo`}
+                          fill
+                          className="object-contain p-1.5"
+                        />
+                      </div>
+                      <div className="min-w-0">
+                        <p className="font-mono-tech text-xs text-primary tracking-wider mb-2">{exp.period}</p>
+                        <h3 className="font-display text-xl md:text-2xl font-semibold">{exp.title}</h3>
+                        <p className="text-muted-foreground mt-1">
+                          {exp.company} · {exp.location}
+                        </p>
+                      </div>
                     </div>
                     <ChevronDown
                       className={cn(
