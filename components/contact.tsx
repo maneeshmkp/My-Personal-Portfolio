@@ -90,7 +90,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-medium">Location</h4>
-                    <p className="text-muted-foreground">Sonipat, India</p>
+                    <p className="text-muted-foreground">Agra, Uttar Pradesh</p>
                   </div>
                 </div>
               </div>

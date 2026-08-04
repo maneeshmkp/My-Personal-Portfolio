@@ -8,6 +8,15 @@ import { Badge } from "@/components/ui/badge"
 
 const projects = [
   {
+    title: "TravelPlan: AI-Powered Travel Management Platform",
+    description:
+      "Full-stack AI travel platform with 40+ REST APIs for AI itinerary generation, trip planning, bookings, expenses, flights, weather, maps, documents, and real-time notifications — built with MERN, Redis, Socket.IO, JWT/RBAC, Docker, and AWS S3.",
+    image: "/travel.jpg?height=400&width=600",
+    tags: ["MERN", "Redis", "Socket.IO", "JWT", "RBAC", "Docker", "AWS S3", "Gemini/OpenAI", "Google Maps", "OpenWeather"],
+    liveUrl: "https://travel-itinerary-application-system.vercel.app",
+    githubUrl: "https://github.com/maneeshmkp/Travel-Itinerary-Application-System",
+  },
+  {
     title: "SHL Assessment Recommendation System",
     description:
       "The SHL Assessment System recommends cognitive, personality, and situational tests for roles, ensuring data-driven, competency-based talent selection.",
@@ -15,14 +24,6 @@ const projects = [
     tags: ["JavaScript", "Next.js","TypeScript", "Tailwind CSS", "Fast APIs", "Gemini API"],
     liveUrl: "https://shl-assessment-recommendation-system-wine.vercel.app/",
     githubUrl: "https://github.com/maneeshmkp/SHL-Assessment-Recommendation-System",
-  },
-  {
-    title: "Travel Itinerary App",
-    description: "A full-stack travel management system using FastAPI and SQLAlchemy, supporting day-wise itineraries, hotels, activities, and MCP-powered recommendations.",
-    image: "/travel.jpg?height=400&width=600",
-    tags: ["Python","JavaScript", "TypeScript", "Fast API", "SQLAlchemy", "PostgreSQL", "Next.js"],
-    liveUrl: "https://travel-itinerary-app-beta.vercel.app/",
-    githubUrl: "https://github.com/maneeshmkp/travel-itinerary-app",
   },
   {
     title: "Instagram Influencer Score Prediction Using LightGBM Regression",

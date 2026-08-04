@@ -65,7 +65,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-in">
-          Full Stack Developer & UI/UX Designer
+          Full Stack Developer & AI Engineer
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in">
@@ -74,7 +74,7 @@ export default function Hero() {
           </Button>
 
           <a 
-            href="\Maneesh_Kumar_Resume_Updated_07.pdf" 
+            href="/Maneesh_Resume.pdf" 
             download 
             target="_blank" 
             rel="noopener noreferrer"

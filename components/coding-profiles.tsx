@@ -31,11 +31,11 @@ const profiles: CodingProfile[] = [
     username: "maneeshmkp",
     profileUrl: "https://leetcode.com/u/maneeshmkp/",
     stats: [
-      { label: "Problems Solved", value: "550+" },
-      { label: "Contest Rating", value: "1503" },
-      { label: "Global Ranking", value: "Top 50%" },
+      { label: "Problems Solved", value: "800+" },
+      { label: "Contest Rating", value: "1669" },
+      { label: "Best Contest Rank", value: "2945" },
     ],
-    achievements: ["4058 Global Rank in Biweekly Contest 153", "100 Days Badge", "50 Days Badge", "Top SQL 50 Badge", "12 different types of Badges"],
+    achievements: ["Global Rank 2945 in Biweekly Contest 159", "100 Days Badge", "50 Days Badge", "Top SQL 50 Badge"],
     icon: <Code2 className="h-6 w-6" />,
     colors: {
       bg: "bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-950/30 dark:to-yellow-950/30",
@@ -49,11 +49,11 @@ const profiles: CodingProfile[] = [
     username: "maneeshp",
     profileUrl: "https://www.codechef.com/users/maneeshp",
     stats: [
-      { label: "Current Rating", value: "1453" },
-      { label: "Max Rating", value: "1453" },
+      { label: "Current Rating", value: "1553" },
+      { label: "Max Rating", value: "1553" },
       { label: "Global Rank", value: "2 Star" },
     ],
-    achievements: ["244 Global Rank in Starters 174", "Contest Contender - Bronze Badge", "Problem Solver - Bronze Badge"],
+    achievements: ["Global Rank 42 in Starters 189", "Contest Contender - Bronze Badge", "Problem Solver - Bronze Badge"],
     icon: <Trophy className="h-6 w-6" />,
     colors: {
       bg: "bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/30 dark:to-orange-950/30",
@@ -205,7 +205,7 @@ export default function CodingProfiles() {
           {/* Overall Stats */}
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center p-6 rounded-lg bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-indigo-950/30 dark:to-blue-950/30 border border-indigo-200 dark:border-indigo-800">
-              <div className="text-2xl md:text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">700+</div>
+              <div className="text-2xl md:text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">800+</div>
               <div className="text-base text-muted-foreground">Total Problems</div>
             </div>
             <div className="text-center p-6 rounded-lg bg-gradient-to-br from-emerald-50 to-green-50 dark:from-emerald-950/30 dark:to-green-950/30 border border-emerald-200 dark:border-emerald-800">

@@ -28,22 +28,16 @@ export default function About() {
             </div>
 
             <div className="animate-in">
-              <h3 className="text-2xl font-semibold mb-4">Full Stack Developer & UI/UX Designer</h3>
+              <h3 className="text-2xl font-semibold mb-4">Full Stack Developer & AI Engineer</h3>
               <p className="text-lg text-muted-foreground mb-6">
-                I’m a passionate full-stack developer, competitive programmer, 
-                and machine learning enthusiast, currently pursuing my BTech 
-                in Information Technology from the Indian Institute of Information Technology,
-                 Sonepat. I love solving complex problems through Data Structures and Algorithms and
-                  have solved over 600+ DSA problems across platforms like 
-                  LeetCode and GeeksforGeeks. 
-                  
+                I&apos;m a full-stack developer and competitive programmer pursuing BTech in Information
+                Technology at IIIT Sonepat (CGPA 8.3/10). I currently work as an SDE Freelancer at Xelron,
+                building LLM evaluation datasets and pipelines for financial reasoning benchmarks.
               </p>
               <p className="text-lg text-muted-foreground mb-6">
-                I enjoy building scalable web applications that combine clean design with 
-                  efficient back-end systems, while also exploring machine learning to create data-driven
-                    solutions. I’m a lifelong learner, driven by curiosity and teamwork,
-                    always eager to grow, innovate, and contribute to impactful projects in the software
-                      world.
+                I love shipping scalable products — from AI-powered travel platforms to evaluation systems —
+                and have solved 800+ DSA problems across LeetCode and other platforms. Driven by curiosity
+                and craftsmanship, I aim to build reliable software that ships.
               </p>
 
               <div className="text-lg grid grid-cols-2 gap-4">
@@ -57,11 +51,11 @@ export default function About() {
                 </div>
                 <div>
                   <p className="font-medium">Location:</p>
-                  <p className="text-muted-foreground">Sonipat, India</p>
+                  <p className="text-muted-foreground">Agra, Uttar Pradesh</p>
                 </div>
                 <div>
                   <p className="font-medium">Availability:</p>
-                  <p className="text-muted-foreground">Available for hire</p>
+                  <p className="text-muted-foreground">Open to opportunities</p>
                 </div>
               </div>
             </div>

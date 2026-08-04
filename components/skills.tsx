@@ -1,39 +1,37 @@
 "use client"
 
-import { Code, Database, Layout, Palette, Server, Smartphone } from "lucide-react"
+import { Code, Database, Layout, Cloud, Server, Smartphone } from "lucide-react"
 
 const skills = [
   {
-    category: "Programming Skills",
+    category: "Programming Languages",
     icon: <Smartphone className="h-8 w-8 mb-4 text-primary" />,
-    items: ["C/C++", "Java", "Python", "SQL", "DSA", "Problem Solving"],
+    items: ["C++", "Python", "Java", "JavaScript (ES6+)", "SQL"],
   },
-
   {
     category: "Frontend",
     icon: <Layout className="h-8 w-8 mb-4 text-primary" />,
-    items: ["HTML/CSS", "JavaScript", "React", "Next.js", "Tailwind CSS"],
+    items: ["React.js", "Next.js", "HTML/CSS", "Tailwind CSS", "Vite"],
   },
   {
     category: "Backend",
     icon: <Server className="h-8 w-8 mb-4 text-primary" />,
-    items: ["Node.js", "Express.js", "Python", "Fast APIs", "RESTful APIs"],
+    items: ["Node.js", "Express.js", "RESTful APIs", "Socket.IO", "Docker"],
   },
   {
-    category: "Database",
+    category: "Databases & Cloud",
     icon: <Database className="h-8 w-8 mb-4 text-primary" />,
-    items: ["MongoDB", "PostgreSQL", "MySQL"],
+    items: ["MongoDB", "PostgreSQL", "MySQL", "Prisma", "Redis"],
   },
   {
-    category: "Design",
-    icon: <Palette className="h-8 w-8 mb-4 text-primary" />,
-    items: ["UI/UX", "Responsive Design", "Wireframing"],
+    category: "Cloud & DevOps",
+    icon: <Cloud className="h-8 w-8 mb-4 text-primary" />,
+    items: ["AWS (EC2, S3, IAM)", "CI/CD", "Vercel", "Render", "Linux"],
   },
-  
   {
-    category: "Other",
+    category: "Tools & AI",
     icon: <Code className="h-8 w-8 mb-4 text-primary" />,
-    items: ["Git", "Docker", "CI/CD", "AWS", "Vercel", "AI/ML"],
+    items: ["Git/GitHub", "Cursor", "Postman", "LLM Integrations", "Claude"],
   },
 ]
 
