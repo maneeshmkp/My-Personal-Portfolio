@@ -31,13 +31,15 @@ export default function About() {
               <h3 className="text-2xl font-semibold mb-4">Full Stack Developer & AI Engineer</h3>
               <p className="text-lg text-muted-foreground mb-6">
                 I&apos;m a full-stack developer and competitive programmer pursuing BTech in Information
-                Technology at IIIT Sonepat (CGPA 8.3/10). I currently work as an SDE Freelancer at Xelron,
-                building LLM evaluation datasets and pipelines for financial reasoning benchmarks.
+                Technology at the Indian Institute of Information Technology, Sonepat (CGPA 8.3/10,
+                Nov 2022 – May 2026). I currently work as an SDE Freelancer at Xelron, building LLM
+                evaluation datasets and pipelines for financial reasoning benchmarks.
               </p>
               <p className="text-lg text-muted-foreground mb-6">
-                I love shipping scalable products — from AI-powered travel platforms to evaluation systems —
-                and have solved 800+ DSA problems across LeetCode and other platforms. Driven by curiosity
-                and craftsmanship, I aim to build reliable software that ships.
+                Coursework includes DSA, DBMS, Operating Systems, TCP/IP, Computer Networks, SDLC,
+                and OOP. I&apos;ve solved 800+ DSA problems and shipped products like TravelPlan — an
+                AI-powered travel management platform. National Semi-Finalist at Flipkart GRiD 7.0 &amp;
+                Unstop Talent Park 2025; AWS Cloud Foundations certified.
               </p>
 
               <div className="text-lg grid grid-cols-2 gap-4">
@@ -52,6 +54,14 @@ export default function About() {
                 <div>
                   <p className="font-medium">Location:</p>
                   <p className="text-muted-foreground">Agra, Uttar Pradesh</p>
+                </div>
+                <div>
+                  <p className="font-medium">Education:</p>
+                  <p className="text-muted-foreground">Nov 2022 – May 2026</p>
+                </div>
+                <div>
+                  <p className="font-medium">Phone:</p>
+                  <p className="text-muted-foreground">+91 8077439938</p>
                 </div>
                 <div>
                   <p className="font-medium">Availability:</p>

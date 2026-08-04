@@ -1,17 +1,17 @@
 "use client"
 
-import { Code, Database, Layout, Cloud, Server, Smartphone } from "lucide-react"
+import { Code, Database, Layout, Cloud, Server, Terminal } from "lucide-react"
 
 const skills = [
   {
     category: "Programming Languages",
-    icon: <Smartphone className="h-8 w-8 mb-4 text-primary" />,
+    icon: <Terminal className="h-8 w-8 mb-4 text-primary" />,
     items: ["C++", "Python", "Java", "JavaScript (ES6+)", "SQL"],
   },
   {
-    category: "Frontend",
+    category: "Development",
     icon: <Layout className="h-8 w-8 mb-4 text-primary" />,
-    items: ["React.js", "Next.js", "HTML/CSS", "Tailwind CSS", "Vite"],
+    items: ["React.js", "Next.js", "HTML", "CSS", "Tailwind CSS", "Vite"],
   },
   {
     category: "Backend",
@@ -21,17 +21,17 @@ const skills = [
   {
     category: "Databases & Cloud",
     icon: <Database className="h-8 w-8 mb-4 text-primary" />,
-    items: ["MongoDB", "PostgreSQL", "MySQL", "Prisma", "Redis"],
+    items: ["MongoDB", "PostgreSQL", "MySQL", "Prisma", "Redis", "AWS (EC2, S3, IAM)"],
   },
   {
-    category: "Cloud & DevOps",
+    category: "Cloud & Deploy",
     icon: <Cloud className="h-8 w-8 mb-4 text-primary" />,
-    items: ["AWS (EC2, S3, IAM)", "CI/CD", "Vercel", "Render", "Linux"],
+    items: ["AWS CloudFront", "CI/CD", "Vercel", "Render", "Linux"],
   },
   {
-    category: "Tools & AI",
+    category: "Tools",
     icon: <Code className="h-8 w-8 mb-4 text-primary" />,
-    items: ["Git/GitHub", "Cursor", "Postman", "LLM Integrations", "Claude"],
+    items: ["Git/GitHub", "Cursor", "Postman", "Co-pilot", "LLM Integrations", "Claude"],
   },
 ]
 
