@@ -4,7 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import Reveal from "@/components/reveal"
 
 interface Testimonial {
   id: number
@@ -21,131 +21,111 @@ const testimonials: Testimonial[] = [
     name: "Sarah Johnson",
     position: "Senior Developer",
     company: "TechCorp",
-    image: "/client1.jpg?height=100&width=100",
+    image: "/client1.jpg",
     quote:
-      "Maneesh is an exceptional developer with a keen eye for detail. His ability to solve complex problems quickly made our project a success. I would gladly work with him again on future projects.",
+      "Maneesh is an exceptional developer with a keen eye for detail. His ability to solve complex problems quickly made our project a success.",
   },
   {
     id: 2,
     name: "Edmond Dantès",
     position: "Project Manager",
     company: "InnovateSoft",
-    image: "/client2.jpg?height=100&width=100",
+    image: "/client2.jpg",
     quote:
-      "Working with Maneesh was a pleasure. His technical skills are impressive, and he consistently delivered high-quality code ahead of schedule. His communication skills made collaboration seamless.",
+      "Working with Maneesh was a pleasure. He consistently delivered high-quality code ahead of schedule — collaboration felt seamless.",
   },
   {
     id: 3,
     name: "Priya Patel",
     position: "UI/UX Designer",
     company: "DesignHub",
-    image: "/client3.jpg?height=100&width=100",
+    image: "/client3.jpg",
     quote:
-      "Maneesh has a rare combination of technical expertise and design sensibility. He implemented my designs perfectly and even suggested improvements that enhanced the user experience.",
+      "Maneesh has a rare mix of technical depth and design sense. He implemented my designs perfectly and suggested UX improvements.",
   },
   {
     id: 4,
     name: "David Wilson",
     position: "CTO",
     company: "StartupX",
-    image: "/client4.jpg?height=100&width=100",
+    image: "/client4.jpg",
     quote:
-      "I was impressed by Maneesh's ability to quickly understand our complex codebase and make significant improvements. His C++ optimizations resulted in a 40% performance boost for our application.",
+      "He quickly understood our codebase and made significant improvements. His C++ optimizations delivered a 40% performance boost.",
   },
 ]
 
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0)
-
-  const nextTestimonial = () => {
-    setActiveIndex((prev) => (prev + 1) % testimonials.length)
-  }
-
-  const prevTestimonial = () => {
-    setActiveIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
+  const active = testimonials[activeIndex]
 
   return (
-    <section id="testimonials" className="py-20 md:py-32 bg-muted/30">
-      <div className="container">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 animate-in">
-            Client <span className="text-primary">Testimonials</span>
+    <section id="testimonials" className="section-pad relative">
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-primary/[0.04] to-transparent" />
+      <div className="container max-w-4xl">
+        <Reveal>
+          <div className="flex items-end gap-6 mb-4 justify-center">
+            <div className="hidden sm:block flex-1 hairline mb-1.5 max-w-[120px]" />
+            <p className="font-mono-tech text-xs tracking-[0.22em] uppercase text-primary">06 — Words</p>
+            <div className="hidden sm:block flex-1 hairline mb-1.5 max-w-[120px]" />
+          </div>
+          <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight mb-14 text-center">
+            What people say
           </h2>
+        </Reveal>
 
-          <div className="relative">
-            <div className="overflow-hidden">
-              <div
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${activeIndex * 100}%)` }}
-              >
-                {testimonials.map((testimonial) => (
-                  <div key={testimonial.id} className="w-full flex-shrink-0 px-4">
-                    <Card className="border bg-card/50 backdrop-blur-sm">
-                      <CardContent className="p-6 md:p-8">
-                        <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
-                          <div className="flex-shrink-0">
-                            <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-primary/20">
-                              <Image
-                                src={testimonial.image || "/placeholder.svg"}
-                                alt={testimonial.name}
-                                fill
-                                className="object-cover"
-                              />
-                            </div>
-                          </div>
-                          <div className="flex-grow">
-                            <Quote className="h-8 w-8 text-primary/30 mb-2" />
-                            <p className="text-xl italic mb-6">{testimonial.quote}</p>
-                            <div className="text-right">
-                              <p className="text-lg font-semibold">{testimonial.name}</p>
-                              <p className="text-base text-muted-foreground">
-                                {testimonial.position}, {testimonial.company}
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                ))}
+        <Reveal delay={1}>
+          <div className="relative rounded-[1.5rem] depth-card p-8 md:p-12 text-center">
+            <Quote className="h-10 w-10 text-primary/30 mx-auto mb-6" />
+            <p className="font-display text-xl md:text-2xl leading-relaxed text-balance mb-10">
+              &ldquo;{active.quote}&rdquo;
+            </p>
+            <div className="flex flex-col items-center gap-3">
+              <div className="relative h-14 w-14 overflow-hidden rounded-full border-2 border-primary/20">
+                <Image src={active.image} alt={active.name} fill className="object-cover" />
+              </div>
+              <div>
+                <p className="font-semibold">{active.name}</p>
+                <p className="text-sm text-muted-foreground">
+                  {active.position}, {active.company}
+                </p>
               </div>
             </div>
 
-            <div className="flex justify-center mt-8 gap-2">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  className={`w-3 h-3 rounded-full transition-colors ${
-                    index === activeIndex ? "bg-primary" : "bg-primary/30"
-                  }`}
-                  onClick={() => setActiveIndex(index)}
-                  aria-label={`Go to testimonial ${index + 1}`}
-                />
-              ))}
+            <div className="flex items-center justify-center gap-4 mt-10">
+              <Button
+                variant="outline"
+                size="icon"
+                className="rounded-xl"
+                onClick={() => setActiveIndex((i) => (i - 1 + testimonials.length) % testimonials.length)}
+                aria-label="Previous"
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </Button>
+              <div className="flex gap-2">
+                {testimonials.map((_, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    className={`h-1.5 rounded-full transition-all ${
+                      i === activeIndex ? "w-6 bg-primary" : "w-1.5 bg-primary/30"
+                    }`}
+                    onClick={() => setActiveIndex(i)}
+                    aria-label={`Testimonial ${i + 1}`}
+                  />
+                ))}
+              </div>
+              <Button
+                variant="outline"
+                size="icon"
+                className="rounded-xl"
+                onClick={() => setActiveIndex((i) => (i + 1) % testimonials.length)}
+                aria-label="Next"
+              >
+                <ChevronRight className="h-4 w-4" />
+              </Button>
             </div>
-
-            <Button
-              variant="ghost"
-              size="icon"
-              className="absolute top-1/2 left-0 -translate-y-1/2 md:-left-12"
-              onClick={prevTestimonial}
-              aria-label="Previous testimonial"
-            >
-              <ChevronLeft className="h-6 w-6" />
-            </Button>
-
-            <Button
-              variant="ghost"
-              size="icon"
-              className="absolute top-1/2 right-0 -translate-y-1/2 md:-right-12"
-              onClick={nextTestimonial}
-              aria-label="Next testimonial"
-            >
-              <ChevronRight className="h-6 w-6" />
-            </Button>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   )

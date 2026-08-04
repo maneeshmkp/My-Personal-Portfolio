@@ -1,9 +1,9 @@
 import type { Metadata } from "next"
 import Header from "@/components/header"
 import Hero from "@/components/hero"
+import MarqueeStrip from "@/components/marquee-strip"
 import About from "@/components/about"
 import WorkExperience from "@/components/work-experience"
-import MotivationalQuote from "@/components/motivational-quote"
 import Skills from "@/components/skills"
 import Projects from "@/components/projects"
 import CodingProfiles from "@/components/coding-profiles"
@@ -12,22 +12,23 @@ import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Portfolio | Maneesh Kumar",
-  description: "Professional portfolio showcasing my work and skills",
+  title: "Maneesh Kumar — Software Developer & Backend Engineer",
+  description:
+    "Portfolio of Maneesh Kumar — software development and backend engineering: scalable APIs, systems, and products that ship.",
 }
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Header />
       <main>
         <Hero />
+        <MarqueeStrip />
         <About />
         <WorkExperience />
-        <MotivationalQuote />
         <Skills />
         <Projects />
-         <CodingProfiles />
+        <CodingProfiles />
         <Testimonials />
         <Contact />
       </main>
